@@ -1,29 +1,25 @@
 import {
     INCREMENT_COUNTER,
-    DECREMENT_COUNTER,
-    LOGOUT_USER
+    DECREMENT_COUNTER
 } from '../constants';
-import {fromJS} from 'immutable';
+
 import {IncrementCounterAction, DecrementCounterAction, OtherAction} from '../actions/counter';
+import initialState from './initialState';
 
-
-const INITIAL_STATE = fromJS({
-    count: 0,
-});
 
 type CounterAction =
     IncrementCounterAction |
         DecrementCounterAction |
         OtherAction
 
-function counterReducer(state = INITIAL_STATE, action: CounterAction = OtherAction) {
+function counterReducer(state = initialState.count, action: CounterAction = OtherAction) {
 
     switch (action.type) {
         case INCREMENT_COUNTER:
-            return state.update('count', (value) => value + action.by);
+            return state + action.by;
 
         case DECREMENT_COUNTER:
-            return state.update('count', (value) => value - 1);
+            return state - 1;
 
         default:
             return state;
