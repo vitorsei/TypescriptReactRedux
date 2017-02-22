@@ -11,6 +11,7 @@ type CounterAction =
     DecrementCounterAction |
     OtherAction
 
+
 function counterReducer(state = INITIAL_STATE, action: CounterAction = OtherAction) {
 
   switch (action.type) {
