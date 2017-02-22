@@ -13,7 +13,7 @@ interface ICounterPageProps extends React.Props<any> {
 
 function mapStateToProps(state) {
   return {
-    counter: state.counter.get('count'),
+    counter: state.counter
   };
 }
 
