@@ -2,7 +2,7 @@ import { Map } from 'immutable';
 
 import fireAction from '../../test-utils/fire-action';
 
-import counterReducer from './counter';
+import counterReducer from './counterReducer';
 
 import {
   INCREMENT_COUNTER,

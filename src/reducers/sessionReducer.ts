@@ -14,8 +14,7 @@ const INITIAL_STATE = fromJS({
   isLoading: false,
 });
 
-function sessionReducer(state = INITIAL_STATE,
-                        action = { type: '', payload: null }) {
+function sessionReducer(state = INITIAL_STATE, action = { type: '', payload: null }) {
   switch (action.type) {
 
   case LOGIN_USER_PENDING:
@@ -27,6 +26,7 @@ function sessionReducer(state = INITIAL_STATE,
     }));
 
   case LOGIN_USER_SUCCESS:
+
     return state.merge(fromJS({
       token: action.payload.token,
       user: action.payload.profile,

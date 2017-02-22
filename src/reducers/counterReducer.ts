@@ -1,6 +1,6 @@
 import {  INCREMENT_COUNTER,  DECREMENT_COUNTER } from '../constants';
 import {fromJS} from 'immutable';
-import {IncrementCounterAction, DecrementCounterAction, OtherAction} from '../actions/counter';
+import {IncrementCounterAction, DecrementCounterAction, OtherAction} from '../actions/counterActions';
 
 const INITIAL_STATE = fromJS({
   count: 0,
@@ -10,7 +10,6 @@ type CounterAction =
   IncrementCounterAction |
     DecrementCounterAction |
     OtherAction
-
 
 function counterReducer(state = INITIAL_STATE, action: CounterAction = OtherAction) {
 

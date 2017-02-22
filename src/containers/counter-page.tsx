@@ -1,7 +1,7 @@
 import * as React from 'react';
 const connect = require('react-redux').connect;
 
-import { increment, decrement } from '../actions/counter';
+import { increment, decrement } from '../actions/counterActions';
 import Counter from '../components/counter';
 import Container from '../components/container';
 

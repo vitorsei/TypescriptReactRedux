@@ -1,7 +1,7 @@
 import { Map } from 'immutable';
 
 import fireAction from '../../test-utils/fire-action';
-import sessionReducer from '../reducers/session';
+import sessionReducer from './sessionReducer';
 
 import {
   LOGIN_USER_PENDING,
